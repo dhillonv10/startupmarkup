@@ -1,0 +1,1168 @@
+<!--
+Google IO 2012/2013 HTML5 Slide Template
+
+Authors: Vikram Dhillon <dhillonv10@gmail.com> 
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--This one seems to work all the time, but really small on ipad-->
+  <!--<meta name="viewport" content="initial-scale=0.4">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" media="all" href="theme/css/default.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+</head>
+    
+<body style="opacity: 0">
+
+    <!-- Title slide --> 
+    
+<slides class="layout-widescreen">
+
+  <slide class="logoslide nobackground">
+    <article class="flexbox vcenter">
+      <span><img src="images/3.png"></span>
+    </article>
+  </slide>
+
+  <slide class="title-slide segue nobackground">
+    <aside class="gdbar"><img src="images/google_developers_icon_128.png"></aside>
+    <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+    <hgroup class="auto-fadein">
+      <h1 data-config-title><!-- populated from slide_config.json --></h1>
+      <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+      <p data-config-presenter><!-- populated from slide_config.json --></p>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Startup Markup Language</h2>
+    </hgroup>
+    <article>
+      <ul >
+        <li>Created as a tool to provide structure: 
+          <ul>
+            <li>Capture an entrepreneur's thinking in a logical and coherent way.</li>
+            <li>Provide programmatic logic to writing simple english sentences.</li>
+          </ul>
+            </li>
+          <br> </br>
+        
+                  <br> </br>
+        <ul> 
+          <li>Problem Statement: 
+              <ul>
+                <li>Too many untested assumptions.</li>
+                <li>Not a concerete plan for execution.</li>
+                <li>Generally a steep learning curve for developers to learn lean methodology</li>
+              </ul>
+        </ul>
+        
+                <aside class="note">
+                  <section>
+                    <ul>
+                      <li>Changes are too big in one dump</li>
+                      <li>Linux kernel patches need to be sent in sequentially consistent way</li>
+                      <li>Introducing too many confounding varirables</li>
+                    </ul>
+                  </section>      
+                </aside>
+              
+        </li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Startup Markup Language: II </h2>
+    </hgroup>
+    <article>
+      <ul>
+
+          <li>Intended audience:
+          <ul>
+            <li>To teach developers the basics of building a startup</li>
+            <li>Extend to a language that anyone can use</li>
+            <li>No programming experience required</li>
+            <li>Inspired by the best features from many programming languages</li>
+            <li>Heavy focus on validation and creating a state of mind where the end-user validates everything</li>
+
+          </ul>
+        </li>
+
+      </ul>
+    </article>
+  </slide>
+
+    
+    
+<slide>
+    <hgroup>
+    <h2>Startup Markup Language: III </h2>
+    </hgroup>
+    <article>
+    <ul>
+
+      <li>Object-oriented language
+      <ul>
+        <li>To have structure, we need tools of organization that provide that structure</li>
+        <li>We use objects</li>
+        <li>Objects are at core of guiding this behaviour-driven language</li>
+      </ul>
+    </li>
+
+    </ul>
+    </article>
+</slide>
+   
+    
+  <slide>
+    <hgroup>
+      <h2>What's an object?</h2>
+      <h3>A virtual representation of a thing</h3>
+    </hgroup>
+    <article>
+      <p>Let's use an example</p>
+        
+      <pre class="prettyprint" data-lang="Startup Markup">
+      
+  // Create a resume paper object
+  // How would you describe it to a machine? 
+  
+  function createResumePaper extends paper {
+ <b>
+    this.color = white 
+    this.size = A4
+    this.burnable = true 
+    </b>
+}
+</pre>
+    </article>
+  </slide>
+ 
+    
+<slide>
+    <hgroup>
+    <h2>Object-orientation</h2>
+    </hgroup>
+    <article>
+    <ul>
+
+      <li>Object-oriented language?
+      <ul>
+           <br> </br>
+        <li> Objects like the last example are the core of this language</li>
+        <li> Objects organized into the most basic functional units called function</li>
+        <li> Declaring a function creates an object </li>
+      </ul>
+    </li>
+
+    </ul>
+    </article>
+</slide>
+    
+
+<slide>
+    <hgroup>
+    <h2>Object-orientation: II </h2>
+    </hgroup>
+    <article>
+    <ul>
+
+      <li>Declaring a function? 
+          <br> </br>
+        
+                <pre class="prettyprint" data-lang="Startup Markup">
+      
+  // Create a paper object
+  // How would you describe paper to a machine? 
+  
+  function createResumePaper extends paper {
+
+}
+</pre>
+                  <br> </br>
+    
+      <ul class="build">
+        <li> Declaration is done by the key-word <code>function</code></li>
+        <li> <code> createResumePaper</code> is the name of the function declared</li>
+      </ul>
+    </li>
+
+    </ul>
+    </article>
+</slide>
+
+
+<slide>
+    <hgroup>
+    <h2>Object-orientation: III </h2>
+    </hgroup>
+    <article>
+    <ul>
+
+      <li>Declaring a function? 
+
+                            <br> </br>
+
+      <ul>
+        <li> An object is created upon declaring the function </li>
+        <li> To access the object created by the function, we use the key-word <code> this</code> </li>
+        <li> <code>this</code> allows us to access properties of the object we created </li>
+      </ul>
+                            <br> </br>
+
+                <pre class="prettyprint" data-lang="Startup Markup">
+      
+  // Create a paper object
+
+    this.color = white 
+    this.size = A4
+    this.burnable = true 
+
+</pre>
+          
+    </li>
+    </ul>
+    </article>
+</slide>
+
+
+<slide>
+    <hgroup>
+    <h2>Object-orientation: IV </h2>
+    </hgroup>
+    <article>
+    <ul>
+
+      <li>Extending a function? 
+          <br> </br>
+        
+                <pre class="prettyprint" data-lang="Startup Markup">
+
+  function createResumePaper extends paper {
+}
+</pre>
+                 
+    
+      <ul class="build">
+        <li> The <code> extends </code> key-word offers base-level characteristics to an object so that you don't have to redefine them.</li>
+        <li> A resumePaper object is first a piece of paper, and then a resume paper</li>
+        <li> It's pointless to reinvent the wheel and describe that a paper first </li>
+        <li>So let's skip all of that and use some simple pre-defined notions</li>
+      </ul>
+    </li>
+
+    </ul>
+    </article>
+</slide>
+    
+
+<slide>
+    <hgroup>
+    <h2>Object-orientation: V </h2>
+    </hgroup>
+    <article>
+    <ul>
+
+      <li>Pre-defined notions 
+          <br> </br>
+                 
+    
+      <ul>
+        <li> We talked about using objects to provide structure for thinking</li>
+        <li> The pre-defined notion in the last example was paper, that created our resumePaper object</li>
+        <li> Pre-defined notions in startup markup language are really just well-defined objects that we give to the user</li>
+        <li> These objects have characteristics that I think will capture the lean methodology</li>
+      </ul>
+    </li>
+
+    </ul>
+    </article>
+</slide>
+
+
+<slide>
+    <hgroup>
+    <h2>Object-orientation: VI </h2>
+    </hgroup>
+    <article>
+    <ul>
+
+      <li>Pre-defined notions 
+          <br> </br>
+                 
+    
+      <ul>
+          <li> More formally, an end-user will access the characteristics of these pre-defined notions or objects and assign them properties of a real startup to generate an experience where all aspects of their business model are captured in this validation-heavy and execution-focused language.  </li>
+      </ul>
+    </li>
+
+    </ul>
+    </article>
+</slide>
+       
+
+<slide>
+    <hgroup>
+    <h2>Object Library</h2>
+    </hgroup>
+    <article>
+    <ul>
+
+      <li>Philosophy 
+          <br> </br>
+                     
+      <ul>
+
+        <li> By using objects, the workings of a startup are treated like an app </li>
+        <li> You code the app which is modular with each module tested </li>
+        <li> And instead of being compiled, the app actually only exists to impose structures and limitations on your mind and thinking </li>
+        <li> This I hope has the result of getting the end-users into a mode of using best-practices to execute their business model. </li>
+
+      </ul>
+    </li>
+
+    </ul>
+    </article>
+</slide>
+
+<slide>
+    <hgroup>
+    <h2>Object Library: Cycle</h2>
+    </hgroup>
+    
+    <article class="flexbox vcenter">
+      <img src="images/cycle.png" alt="Description" title="cyclicvolution">
+    </article>  
+
+</slide>
+
+
+<slide>
+    <hgroup>
+    <h2>Object Library: Cycle</h2>
+    </hgroup>
+    
+    <article>
+    <ul>
+
+        <li> Loop design, where each number evolves to the next one </li>
+        <li> This could highlight growing importance as the numbers move from one to the next </li>
+        <li> Used universally in this startup markup language </li>
+        <li> Slight modifications make up the rest of the object library </li>
+
+    </ul>
+
+    </article>
+</slide>
+
+
+<slide>
+    <hgroup>
+    <h2>Object Library: cyclicEvolution</h2>
+    </hgroup>
+    
+    <article>
+    <ul>
+      <li>First modification </li>                     
+    <ul>
+
+    
+    <article class="flexbox vcenter">
+      <img src="images/cycle_exit.png" alt="Description" title="cyclicvolution">
+    </article>  
+</article>
+</slide>
+
+
+<slide>
+    <hgroup>
+    <h2>Object Library: cyclicEvolution</h2>
+    </hgroup>
+    
+    <article>
+    <ul>
+
+        <li> Loop design, with an exit </li>
+        <li> Designed to show a resolution from iterative search with one event evolving to the next </li>
+        <li> Can be used to show recent trends leading up to a product idea </li>
+        <li> Every point or event can also be used as a meta-event to capture more cateogorical or relational events. </li>
+
+    </ul>
+
+    </article>
+</slide>
+        
+        
+<slide>
+    <hgroup>
+    <h2>Object Library: cyclicEvolution</h2>
+    </hgroup>
+    <article>
+    <ul>
+      <li>Meta-event? </li>                     
+    <ul>
+
+    
+    <article class="flexbox vcenter">
+      <img src="images/circle_tree.png" alt="Description" title="cyclicvolution">
+    </article>  
+</article> 
+</slide>
+        
+        
+<slide>
+    <hgroup>
+    <h2>Object Library: cyclicEvolution</h2>
+    </hgroup>
+    <article> 
+    <ul>
+        <li> A topic-subtopic approach in describing the events associated to the cyclicEvolution object </li>
+        <li> This is universal to all the cyclic objects in this language </li>
+    </ul>
+    </article> 
+
+</slide>
+        
+
+<slide>
+    <hgroup>
+    <h2>Object Library: writePad</h2>
+    </hgroup>
+    <article> 
+    <ul>
+        <li> A simple modification of cyclicEvolution to list mutually independent topics but no evolution occurs between them </li>
+        <li> Ideas can be listed in any order here, the only structure imposed is that they are a part of the cycle </li>
+        <li> Think of this as branching </li>
+        <li> Still follow meta-events so using a cyclicEvolution object offers inherent structure in the process </li>
+    </ul>
+        </article> 
+    
+</slide>
+        
+        
+<slide>
+    <hgroup>
+    <h2>Object Library: writePad</h2>
+    </hgroup>
+    <article> 
+    <ul>
+      <li>No structure </li>                     
+    <ul>
+
+    
+    <article class="flexbox vcenter">
+      <img src="images/cycle_pad.png" alt="Description" title="cyclicvolution">
+    </article>  
+</article> 
+</slide>
+
+
+<slide>
+    <hgroup>
+    <h2>Object Library: cList</h2>
+    </hgroup>
+    <article> 
+    <ul>
+        <li> The only structure here that doesn't follow a cycle structure</li>
+        <li> Simple implementation of cornell notes as an object </li>
+        <li> One thing <code> -> </code> to another </li>
+        <li> Can be used to define your competitors and what they do </li>
+        <li> Competitor <code> -> </code> Product </li>
+    </ul>
+</article> 
+
+</slide>
+
+
+<slide>
+    <hgroup>
+    <h2>Object Library: Event Loop</h2>
+    </hgroup>
+    <article> 
+    <ul>
+        <li> The single most important structure of this markup language</li>
+        <li> An event loop checks for events that are defined for the event loop </li>
+        <li> If any of the defined events in the event loop are triggered, a subroutine is initiated </li>
+        <li> A subroutine is basically a fancy way of saying one cause (event triggered) leads to an effect </li>
+        <li> The effect of an event loop is ALWAYS to run a unit test </li>
+    </ul>
+
+</article> 
+</slide>
+        
+
+<slide>
+    <hgroup>
+    <h2>Object Library: Event Loop</h2>
+    </hgroup>
+    <article> 
+    <ul>
+        <li> The simplest unit of work in startup markup is a function </li>
+        <li> Every function has a unit test associated with it, to test the function </li>
+        <li> Every single unit test is basically a customer development or validation check  </li>
+        <li> Event loop continously runs and unlike cyclicEvolution, this doesn't have an exit </li>
+    </ul>
+
+</article> 
+</slide>
+
+
+<slide>
+    <hgroup>
+    <h2>Object Library: Event Loop</h2>
+    </hgroup>
+    <article> 
+    <ul>
+        <li> Instead of organizing topics and sub-topics, event loop monitors certain files for change</li>
+        <li> These files are the critical aspects of your business model written in startup markup</li>
+        <li> If any of the files are changed, event loop stops and will jamm the whole application </li>
+        <li> While the application is jammed, a subroutine is initiated to test the the change that was introduced in one of the core files</li>
+        <li> This enforces the theme of small, managable and easy to check changes done one at a time to the business model </li>
+        <li> This has very fundamental implications for how startups execute their business model</li>
+    </ul>
+</article> 
+</slide>
+
+
+<slide>
+    <hgroup>
+    <h2>Object Library: Event Loop</h2>
+    </hgroup>
+    <article> 
+    <ul>
+        <li> Realize that this is not a compiled language, there really is no event loop that will stop you from doing anything</li>
+        <li> This exercise is nothing more than a mental constrain created to help understand business model execution done with programmatic logic</li>
+        <li> After the subroutine ran and the change was tested, if it returns a positive value, the event loop starts again and checks for if there are any more changes in any other files.  </li>
+    </ul>
+</article> 
+</slide>
+     
+        
+<slide>
+    <hgroup>
+    <h2>Object Library: Event Loop</h2>
+    </hgroup>
+    <article> 
+
+    <article class="flexbox vcenter">
+      <img src="images/cycle.png" alt="Description" title="cyclicvolution">
+    </article>  
+</article> 
+</slide>        
+        
+
+<slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/google_developers_icon_128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2> Let's write some code </h2>
+      <h3>So far, we did theory, let's see how this works out in implementation</h3>
+    </hgroup>
+  </slide>
+        
+
+  <slide>
+    <hgroup>
+      <h2>App Structure</h2>
+    </hgroup>
+    <article>
+      <iframe data-src="http://pastebin.com/raw.php?i=8bV9xVZp"></iframe>
+    </article>
+  </slide>      
+  
+        
+ <slide>
+    <hgroup>
+    <h2>Competitors.sm</h2>
+    </hgroup>
+    <article>
+
+    <pre class="prettyprint" data-lang="Startup Markup">
+--- DESCRIPTOR --- 
+
+/* List the competitors and what product they make, and also what competitive 
+advantages you would have 
+
+Also another task is to identify when intellectual property gives you any 
+competitive advantage */
+
+function listCompetitors extends cLists {
+	
+  	this.cList = [
+  	'Competitor 1' -> 'Makes product 1'
+  	'Competitor 2' -> 'Makes product 2'
+  	'Competitor 3' -> 'Makes product 3'
+  	'Competitor 4' -> 'Makes product 4'
+  	'Competitor 5' -> 'Makes product 5'
+  	]
+
+  	this.testedWith = CustDev.index(4)
+
+}
+    </pre>
+
+    </article>
+</slide>       
+        
+        
+<slide>
+    <hgroup>
+    <h2>Competitors.sm</h2>
+    </hgroup>
+    <article>
+
+    <pre class="prettyprint" data-lang="Startup Markup">
+
+function competitiveAdvantage extends cLists {
+
+    	this.cList = [
+    	'Competitor 1' -> 'Advantage 1'
+    	'Competitor 2' -> 'Advantage 2'
+    	'Competitor 3' -> 'Advantage 3'
+    	'Competitor 4' -> 'Advantage 4'
+    	'Competitor 5' -> 'Advantage 5'
+    	]
+    	
+    	this.testedWith = CustDev.index(5)
+
+}
+    </pre>
+
+    </article>
+</slide>        
+        
+        
+<slide>
+    <hgroup>
+    <h2>Competitors.sm</h2>
+    </hgroup>
+    <article>
+
+    <pre class="prettyprint" data-lang="Startup Markup">
+
+function competitiveAdvantage extends cLists uses IP {
+
+    this.cList = [
+    'Competitor 1' -> 'Advantage 1'
+    'Competitor 2' -> 'Advantage 2'
+    'Competitor 3' -> 'Advantage 3'
+    'Competitor 4' -> 'Advantage 4'
+    'Competitor 5' -> 'Advantage 5'
+    ]
+    
+    this.testedWith = CustDev.index(6)
+
+}
+    </pre>
+
+    </article>
+</slide>    
+        
+<slide>
+    <hgroup>
+    <h2>Customer Profile.sm</h2>
+    </hgroup>
+    <article>
+
+    <pre class="prettyprint" data-lang="Startup Markup">
+
+--- DESCRIPTOR --- 
+
+/* Describe who your customer is that you are catering to or targetting
+Describe the channels through which you can reach your customers 
+*/
+
+function customerProfile extends cLists {
+
+    this.cList = [
+    'Property 1' -> 'Description 1'
+    'Property 2' -> 'Description 2'
+    'Property 3' -> 'Description 3'
+    'Property 4' -> 'Description 4'
+    'Property 5' -> 'Description 5'
+    ]
+    
+    this.testedWith = CustDev.index(7)
+	
+}
+  
+    </pre>
+
+    </article>
+</slide>     
+        
+        
+<slide>
+    <hgroup>
+    <h2>Customer Profile.sm</h2>
+    </hgroup>
+    <article>
+
+    <pre class="prettyprint" data-lang="Startup Markup">
+
+function channels extends writePad {
+	
+      this.numTrends = 6
+
+      this.actionPad = [
+
+         - 'Parent Channel 1'
+           - 'Child Channel Use 2'
+           - 'Child Channel Use 3'
+
+         - 'Parent Channel 4'
+           - 'Child Channel Use 5'
+           - 'Child Channel Use 6'
+      ]
+
+      this.testedWith = CustDev.index(8)
+
+}
+  
+    </pre>
+
+    </article>
+</slide>
+  
+        
+<slide>
+    <hgroup>
+    <h2>Problem.sm</h2>
+    </hgroup>
+    <article>
+
+         <!--   
+    
+    /* Describe the problem statement and the pain that the customer 
+experiences
+
+How is the customer dealing with the problem today */ --> 
+        
+    <pre class="prettyprint" data-lang="Startup Markup">
+function defineProblem extends cyclicEvolution uses Recent Trends {
+		
+    this.numTrends = 6
+
+    this.cyclicPad = [
+
+       - 'Parent Customer Pain 1 '
+         - 'Child Customer Pain 2 '
+         - 'Child Customer Pain 3 '
+
+       - 'Parent Customer Pain 4 '
+         - 'Child Customer Pain 5 '
+         - 'Child Customer Pain 6 '
+
+       * Problem Statement 
+    ]
+
+    this.testedWith = CustDev.unitIndex(2)
+}
+  
+    </pre>
+
+    </article>
+   
+
+    
+</slide> 
+        
+<slide>
+    <hgroup>
+    <h2>Problem.sm</h2>
+    </hgroup>
+    <article>
+
+    <pre class="prettyprint" data-lang="Startup Markup">
+
+function currentImplementation extends writePad {
+
+		this.numTrends = 6
+
+        this.actionPad = [
+
+           - 'Parent Current Implementation 1 '
+             - 'Child Current Implementation 2 '
+             - 'Child Current Implementation 3 '
+
+           - 'Parent Current Implementation 4 '
+             - 'Child Current Implementation 5 '
+             - 'Child Current Implementation 6 '
+        ]
+
+        this.testedWith = CustDev.unitIndex(3)
+}
+  
+    </pre>
+
+    </article>
+</slide> 
+        
+        
+<slide>
+    <hgroup>
+    <h2>Recent Trends.sm </h2>
+    </hgroup>
+    <article>
+
+        <!-- --- DESCRIPTOR ---
+
+/* Define recent trends that make your solution possible and give some historical 
+evolution that lead up to this point */ -->
+        
+    <pre class="prettyprint" data-lang="Startup Markup">
+function recentTrends extends cyclicEvolution {
+
+        this.numTrends = 6
+
+        this.cyclicPad = [
+
+           - 'Parent Trend 1 '
+             - 'Child Trend 2 '
+             - 'Child Trend 3 '
+
+           - 'Parent Trend 4 '
+             - 'Child Trend 5 '
+             - 'Child Trend 6 '
+
+           * Trend Resolution
+        ]
+
+        this.testedWith = CustDev.unitIndex()
+}  
+    </pre>
+
+    </article>
+</slide> 
+        
+        
+<slide>
+    <hgroup>
+    <h2>Revenue Model.sm </h2>
+    </hgroup>
+    <article>
+
+    <pre class="prettyprint" data-lang="Startup Markup">
+function revenuePitch extends writePad {
+
+    this.numTrends = 6
+
+    this.actionPad = [
+
+       - 'Parent Proposition 1 '
+         - 'Child Proposition 2 '
+         - 'Child Proposition 3 '
+
+       - 'Parent Proposition 4 '
+         - 'Child Proposition 5 '
+         - 'Child Proposition 6 '
+    ]
+
+  this.testedWith = CustDev.index(11)
+
+}
+  
+    </pre>
+
+    </article>
+</slide> 
+        
+
+<slide>
+    <hgroup>
+    <h2>Revenue Model.sm </h2>
+    </hgroup>
+    <article>
+
+    <pre class="prettyprint" data-lang="Startup Markup">
+function revenueModel extends cList {
+    
+    this.cList = [
+      'Competitor 1' -> 'Makes product 1'
+      'Competitor 2' -> 'Makes product 2'
+      'Competitor 3' -> 'Makes product 3'
+      'Competitor 4' -> 'Makes product 4'
+      'Competitor 5' -> 'Makes product 5'
+    ]
+
+    this.testedWith = CustDev.index(12)
+
+}
+  
+    </pre>
+
+    </article>
+</slide> 
+        
+
+<slide>
+    <hgroup>
+    <h2>Solution.sm </h2>
+    </hgroup>
+    <article>
+
+        <!-- 
+--- DESCRIPTOR --- 
+
+/* Demonstrate your company’s value proposition to make the customer’s life better. 
+Product line-up (features, architecture).
+Development roadmap.
+ */
+-->
+        
+    <pre class="prettyprint" data-lang="Startup Markup">
+function productArchitecture extends writePad {
+  
+      this.numTrends = 6
+
+        this.actionPad = [
+
+           - 'Parent Proposition 1 '
+             - 'Child Proposition 2 '
+             - 'Child Proposition 3 '
+
+           - 'Parent Proposition 4 '
+             - 'Child Proposition 5 '
+             - 'Child Proposition 6 '
+        ]
+
+      this.testedWith = CustDev.index(11)
+}
+    </pre>
+
+    </article>
+</slide> 
+
+<slide>
+    <hgroup>
+    <h2>Solution.sm </h2>
+    </hgroup>
+    <article>
+
+    <pre class="prettyprint" data-lang="Startup Markup">
+function roadMap extends cyclicEvolution {
+        
+        this.numTrends = 6
+
+        this.cyclicPad = [
+
+           - 'Parent Trend 1 '
+             - 'Child Trend 2 '
+             - 'Child Trend 3 '
+
+           - 'Parent Trend 4 '
+             - 'Child Trend 5 '
+             - 'Child Trend 6 '
+
+           * Trend Resolution
+        ]
+
+        this.testedWith = CustDev.unitIndex()
+}
+
+    </pre>
+
+    </article>
+</slide>
+        
+<slide>
+    <hgroup>
+    <h2>Solution.sm </h2>
+    </hgroup>
+    <article>
+
+    <pre class="prettyprint" data-lang="Startup Markup">
+function valuePropositions extends writePad {
+
+		this.numTrends = 6
+
+        this.actionPad = [
+
+           - 'Parent Proposition 1 '
+             - 'Child Proposition 2 '
+             - 'Child Proposition 3 '
+
+           - 'Parent Proposition 4 '
+             - 'Child Proposition 5 '
+             - 'Child Proposition 6 '
+        ]
+
+        this.testedWith = CustDev.index(11)
+
+}
+
+    </pre>
+
+    </article>
+</slide> 
+        
+ 
+<slide>
+    <hgroup>
+    <h2>Vision.sm </h2>
+    </hgroup>
+    <article>
+
+    <pre class="prettyprint" data-lang="Startup Markup">
+ --- DESCRIPTOR ---
+
+// Describe the vision of the startup in one short declarative sentence.
+
+// As the startup evolves, this file stays unchanged, simply because 
+the vision should remain the same: Know Thyself.
+
+
+function startupVision extends Immutable {
+
+        this.describeVision = [
+                'Company Vision Here'
+        ]
+
+        this.testedWith = CustDev.unitIndex(1)
+}
+
+
+    </pre>
+
+    </article>
+</slide> 
+        
+        
+<slide>
+    <hgroup>
+    <h2>Vision.sm </h2>
+    </hgroup>
+    <article>
+
+        <!-- 
+
+--- DESCRIPTOR ---
+
+/* Nodejs Event loop -> A loop that continously checks for events in node, but for us this is feedback from customers for our: MVP, split testing, as we add features and more so as a form of continuous deployment. */
+
+--> 
+    <pre class="prettyprint" data-lang="Startup Markup">
+function eventLoop extends cyclicEvolution uses noExit {
+
+	this.exitEvent = false
+	this.loopRefill = true
+	this.blockApp = true
+
+	this.cyclemonitor = [
+
+		cyclemonitor.component[1] = Main.sm
+		cyclemonitor.component[2] = Competitive Advantage.sm
+		cyclemonitor.component[3] = Competitors.sm
+		cyclemonitor.component[4] = Customer Profile.sm
+		cyclemonitor.component[5] = Revenue Model.sm
+	]
+}
+    </pre>
+
+    </article>
+</slide>        
+        
+
+<slide>
+    <hgroup>
+    <h2>Main.sm </h2>
+    </hgroup>
+    <article>
+
+    <pre class="prettyprint" data-lang="Startup Markup">
+--- DESCRIPTOR --- 
+
+/* Your MVP goes here  
+Features can be additional functions that it can call */
+
+function derivedMVP extends some_product {
+  
+    this.improvesOn = [
+
+      'first feature'
+      'second feature'
+    ]
+
+    this.testedWith = CustDev.index(12)
+
+}
+    </pre>
+
+    </article>
+</slide> 
+        
+
+<slide>
+    <hgroup>
+    <h2>Main.sm </h2>
+    </hgroup>
+    <article>
+
+    <pre class="prettyprint" data-lang="Startup Markup">
+function MVP {
+
+    this.implementsFeature = [
+
+        'first feature'
+        'second feature'
+      ]
+
+    this.testedWith = CustDev.index(12)
+  
+}
+    </pre>
+
+    </article>
+</slide> 
+
+
+  <slide class="thank-you-slide segue nobackground">
+    <aside class="gdbar right"><img src="images/google_developers_icon_128.png"></aside>
+    <article class="flexbox vleft auto-fadein">
+      <h2>&lt;Thank You!&gt;</h2>
+      <p>dhillonv10@gmail.com</p>
+    </article>
+    <p class="auto-fadein" data-config-contact>
+      <!-- populated from slide_config.json -->
+    </p>
+  </slide>
+
+  <slide class="logoslide dark nobackground">
+    <article class="flexbox vcenter">
+      <span><img src="images/google_developers_logo_white.png"></span>
+    </article>
+  </slide>
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+<script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-XXXXXXXX-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body>
+</html>

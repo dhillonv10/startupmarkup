@@ -1,0 +1,473 @@
+Lean Startup is an iterative approach based on the lean manufacturing revolution aimed to help startups learn how to build a sustainable business around a product. Steve Blank's great insight was that large companies execute a known business model but startups iteratively search for a business model to implement which can then help them scale. 
+
+Eric Reis has often said that his mission behind doing Lean Startup has been to put the practice of entrapenaurship on a more rigirous footing and this came out of a natural extension to that. Basically startup markup language is a xml-type markup language that provides the grammer and programmatic structure to the thinking of an entrapenaur. 
+
+A language to understand early stage ventures,
+
+___________________________________________________________________________
+
+Design: 
+
+- Datatypes: For the primities: Use Int, string and boolean. That should be good and for more complicated types, I am thinking about arrays and objects of arrays. 
+
+- Numbers can be defined as objects in an array where the first field is the raw data and the second one is the string describing the relation between the data. 
+
+- The most basic unit of action is a function 
+
+- Business canvas can only define a business and it's components, it misses out on execution of it and we try to do that here with this programming language 
+
+Main() is the MVP. 
+
+Value propositions must exist in the Problem file
+Channels should be in customer profile.sm
+
+________________________________________________________________
+
+Files: 
+
+App_router.sm 
+
+Root
+|
+|--` App_Router.sm
+| 
+|-- Business Model
+|   |--` Competitors.sm
+|   |--` Customer Profile.sm
+|   |--` Problem.sm
+|   |--` Recent Trends.sm
+|   |--` Revenue Model.sm
+|   |--` Solution.sm
+|   |--` Vision.sm
+| 
+|--` Event_Loop.sm
+|--` Main.sm
+|
+|-- Unit Tests
+| |  | 
+| |  |-- Business Model Tests
+| |  |  |--` Competitors.
+| |  |  |--` Customer Profile.sm
+| |  |  |--` Problem.sm
+| |  |  |--` Recent Trends.sm
+| |  |  |--` Revenue Model.sm
+| |  |  |--` Solution.sm
+| |  |  |--` Vision.sm
+| |  |  
+| |  |-- Customer Development Tests
+| |  |  |--` Continous Deployment
+| |  |  |--` Continous Integration
+| |  |  
+| |  |-- Customer Use Cases
+| |  |  |--` Use Case 1
+| |  |  |--` Use Case 2
+| |  |  |--` Use Case 3
+| |  |  |--` Use Case 4
+| |  |  |--` Use Case 5
+| |  |  |--` Use Case 6
+| |  |  |--` Use Case 7
+| |  |  |--` Use Case 8
+
+
+***************************************
+
+Competitors.sm
+
+--- DESCRIPTOR --- 
+
+/* List the competitors and what product they make, and also what competitive advantages you would have 
+Also another task is to identify when intellectual property gives you any competitive advantage */
+
+function listCompetitors extends cLists {
+	
+  	this.cList = [
+  	'Competitor 1' -> 'Makes product 1'
+  	'Competitor 2' -> 'Makes product 2'
+  	'Competitor 3' -> 'Makes product 3'
+  	'Competitor 4' -> 'Makes product 4'
+  	'Competitor 5' -> 'Makes product 5'
+  	]
+
+  	this.testedWith = CustDev.index(4)
+
+}
+
+
+function competitiveAdvantage extends cLists {
+
+    	this.cList = [
+    	'Competitor 1' -> 'Advantage 1'
+    	'Competitor 2' -> 'Advantage 2'
+    	'Competitor 3' -> 'Advantage 3'
+    	'Competitor 4' -> 'Advantage 4'
+    	'Competitor 5' -> 'Advantage 5'
+    	]
+    	
+    	this.testedWith = CustDev.index(5)
+
+}
+
+function competitiveAdvantage extends cLists uses IP {
+
+    this.cList = [
+    'Competitor 1' -> 'Advantage 1'
+    'Competitor 2' -> 'Advantage 2'
+    'Competitor 3' -> 'Advantage 3'
+    'Competitor 4' -> 'Advantage 4'
+    'Competitor 5' -> 'Advantage 5'
+    ]
+    
+    this.testedWith = CustDev.index(6)
+
+}
+
+
+***************************************
+
+Customer Profile.sm
+
+--- DESCRIPTOR --- 
+
+/* Describe who your customer is that you are catering to or targetting
+Describe the channels through which you can reach your customers 
+*/
+
+function customerProfile extends cLists {
+
+    this.cList = [
+    'Property 1' -> 'Description 1'
+    'Property 2' -> 'Description 2'
+    'Property 3' -> 'Description 3'
+    'Property 4' -> 'Description 4'
+    'Property 5' -> 'Description 5'
+    ]
+    
+    this.testedWith = CustDev.index(7)
+	
+}
+
+function channels extends writePad {
+	
+      this.numTrends = 6
+
+      this.actionPad = [
+
+         - 'Parent Channel 1'
+           - 'Child Channel Use 2'
+           - 'Child Channel Use 3'
+
+         - 'Parent Channel 4'
+           - 'Child Channel Use 5'
+           - 'Child Channel Use 6'
+      ]
+
+      this.testedWith = CustDev.index(8)
+
+}
+
+***************************************
+
+Revenue Model.sm
+
+function revenuePitch extends writePad {
+
+    this.numTrends = 6
+
+    this.actionPad = [
+
+       - 'Parent Proposition 1 '
+         - 'Child Proposition 2 '
+         - 'Child Proposition 3 '
+
+       - 'Parent Proposition 4 '
+         - 'Child Proposition 5 '
+         - 'Child Proposition 6 '
+    ]
+
+  this.testedWith = CustDev.index(11)
+
+}
+
+function revenueModel extends cList {
+    
+    this.cList = [
+      'Competitor 1' -> 'Makes product 1'
+      'Competitor 2' -> 'Makes product 2'
+      'Competitor 3' -> 'Makes product 3'
+      'Competitor 4' -> 'Makes product 4'
+      'Competitor 5' -> 'Makes product 5'
+    ]
+
+    this.testedWith = CustDev.index(12)
+
+}
+
+
+
+***************************************
+
+Solution.sm
+
+--- DESCRIPTOR --- 
+
+/* Demonstrate your company’s value proposition to make the customer’s life better. 
+Product line-up (features, architecture).
+Development roadmap.
+ */
+
+function productArchitecture extends writePad {
+  
+      this.numTrends = 6
+
+        this.actionPad = [
+
+           - 'Parent Proposition 1 '
+             - 'Child Proposition 2 '
+             - 'Child Proposition 3 '
+
+           - 'Parent Proposition 4 '
+             - 'Child Proposition 5 '
+             - 'Child Proposition 6 '
+        ]
+
+      this.testedWith = CustDev.index(11)
+}
+
+function roadMap extends cyclicEvolution {
+        
+        this.numTrends = 6
+
+        this.cyclicPad = [
+
+           - 'Parent Trend 1 '
+             - 'Child Trend 2 '
+             - 'Child Trend 3 '
+
+           - 'Parent Trend 4 '
+             - 'Child Trend 5 '
+             - 'Child Trend 6 '
+
+           * Trend Resolution
+        ]
+
+        this.testedWith = CustDev.unitIndex()
+}
+
+
+function valuePropositions extends writePad {
+
+		this.numTrends = 6
+
+        this.actionPad = [
+
+           - 'Parent Proposition 1 '
+             - 'Child Proposition 2 '
+             - 'Child Proposition 3 '
+
+           - 'Parent Proposition 4 '
+             - 'Child Proposition 5 '
+             - 'Child Proposition 6 '
+        ]
+
+        this.testedWith = CustDev.index(11)
+
+}
+
+***************************************
+
+Main.sm
+
+--- DESCRIPTOR --- 
+
+/* Your MVP goes here  
+Features can be additional functions that it can call */
+
+function derivedMVP extends some_product {
+  
+    this.improvesOn = [
+
+      'first feature'
+      'second feature'
+    ]
+
+    this.testedWith = CustDev.index(12)
+
+}
+
+function MVP {
+
+    this.implementsFeature = [
+
+        'first feature'
+        'second feature'
+      ]
+
+    this.testedWith = CustDev.index(12)
+  
+}
+
+
+
+***************************************
+
+
+Event_Loop.sm 
+
+--- DESCRIPTOR ---
+
+/* Nodejs Event loop -> A loop that continously checks for events in node, but for us this is feedback from customers for our: MVP, split testing, as we add features and more so as a form of continuous deployment. */
+
+function eventLoop extends cyclicEvolution uses noExit {
+
+	this.exitEvent = false
+	this.loopRefill = true
+	this.blockApp = true
+
+	this.cyclemonitor = [
+
+		cyclemonitor.component[1] = Main.sm
+		cyclemonitor.component[2] = Competitive Advantage.sm
+		cyclemonitor.component[3] = Competitors.sm
+		cyclemonitor.component[4] = Customer Profile.sm
+		cyclemonitor.component[5] = Revenue Model.sm
+
+	]
+
+}
+
+--- DEV NOTES --- 
+
+* Event Loop is just a cyclicEvolution object that doesn't have a proper exit. 
+* Each time a change is made to one of the monitored files, an exit subroutine is initiated locally for that circle and the circle empties. 
+* When the circle empties, the loop stop right then and there and no other circles can be emptied. 
+* Empying is a blocking feature. 
+* This means that when one circle is emptied, meaning the event loop detected a change in a file, none of the other files in the loop can be changed until the exit subroutine is completed and it comes back to the loop starting the loop again. 
+* In a way when the loop starts again, it checks for no changes in the rest of the components, and when it completes the circle, any emptied circles fill up and the normal process repeats.
+* Event loop is intended to find that sustainable business model that a startup is looking for and it does so iteratively
+
+Loop refill is a blocking feature. Basically once a testing subroutine is initiated, another one can't be initiated in the whole package until the loop finishes and then the loop refills. This is a blocking feature meant to enable and create small, clear, concise and testable changes to for instance the MVP without changing any of the other ones. This prevents hedging from the get go and creates a startup focused on changing one thing at a time and then realizing whether they can pivot or not. 
+
+Asynchrounous non-blocking -> Mark Sulter says that startups try to do too much which leads to failure. 
+
+A perfect example of this was to add too many features. For instance you want to add x and y. Then see which one succeeds and that's what you'll put more effort for. This is stupid, you can't do half a science experiment and then half of another, do one solid experiment and then carry out the second one if it fails. Mark: People are hedging, it's scary to say if I do all this stuff and it doesn't work, I'll be screwed. So I'll do a litle bit of this and a little of that, then whatever works I'll put more wood behind it. But in reality you end up sub-optimizng it. This we define as in node as async. non-blocking methods, but for startups to succeed, we need blocking methodology where you can't run parallel experiments. 
+
+
+***************************************
+
+Problem.sm
+
+--- DESCRIPTOR ---
+
+/* Describe the problem statement and the pain that the customer experiences
+How is the customer dealing with the problem today */
+
+function defineProblem extends cyclicEvolution uses Recent Trends {
+		
+    this.numTrends = 6
+
+    this.cyclicPad = [
+
+       - 'Parent Customer Pain 1 '
+         - 'Child Customer Pain 2 '
+         - 'Child Customer Pain 3 '
+
+       - 'Parent Customer Pain 4 '
+         - 'Child Customer Pain 5 '
+         - 'Child Customer Pain 6 '
+
+       * Problem Statement 
+    ]
+
+    this.testedWith = CustDev.unitIndex(2)
+}
+
+
+function currentImplementation extends writePad {
+
+		this.numTrends = 6
+
+        this.actionPad = [
+
+           - 'Parent Current Implementation 1 '
+             - 'Child Current Implementation 2 '
+             - 'Child Current Implementation 3 '
+
+           - 'Parent Current Implementation 4 '
+             - 'Child Current Implementation 5 '
+             - 'Child Current Implementation 6 '
+        ]
+
+        this.testedWith = CustDev.unitIndex(3)
+}
+
+--- DEV NOTES --- 
+
+* The cyclicPad object here addresses customer pains as the background to the story organized in topic-subtopic template and the problem statement as the punchline to it and also the exit from the loop 
+
+* The writePad is just a cyclicPad with no imposed organization. With a cyclicPad, each point on the circle logically leads to the next with a well defined exit and thus a well defined direction to proceed in. Here in an actionPad, we just have actionable points but they don't necessarily need to lead from one to the next one. No hit-to-lead progression as Dr. Gardell says. There is still inherent organization in the form of topic-subtopic but overall nothing that is being imposed here.
+
+***************************************
+
+Recent Trends.sm 
+
+--- DESCRIPTOR ---
+
+/* Define recent trends that make your solution possible and give some historical evolution that lead up to this point */
+
+function recentTrends extends cyclicEvolution {
+
+        this.numTrends = 6
+
+        this.cyclicPad = [
+
+           - 'Parent Trend 1 '
+             - 'Child Trend 2 '
+             - 'Child Trend 3 '
+
+           - 'Parent Trend 4 '
+             - 'Child Trend 5 '
+             - 'Child Trend 6 '
+
+           * Trend Resolution
+        ]
+
+        this.testedWith = CustDev.unitIndex()
+}
+
+--- DEV NOTES ---
+
+* The cyclic evolution class contain the cyclic pad which is an object that can be used to define any sort of trends, it works like so:
+        ** First you give a number of all the trends that you will have
+        ** Then you start listing the trends in organized cateogories
+        ** You write all of the preceeding trends and the last trend written with a * is the trend resolution
+        ** Trend Resolution is your product and the answer to the question: What did those trends lead to?
+
+
+***************************************
+
+Vision.sm
+
+ --- DESCRIPTOR ---
+
+// Describe the vision of the startup in one short declarative sentence.
+// As the startup evolves, this file stays unchanged, simply because a startup's vision should remain the same: Know Thyself.
+
+
+function startupVision extends Immutable {
+
+        this.describeVision = [
+                'Company Vision Here'
+        ]
+
+        this.testedWith = CustDev.unitIndex(1)
+}
+
+
+--- DEV NOTES ---
+
+* Startup vision shouldn't change, the hypothesis to implement it should and that's the idea behind it extending an Immutable class.
+* Some files are made to be short and sweet, the reason is positive reinforcement in knowing that you have finished something
+* Unit Tests will have an index, this is done on purpose for one single reason: Everyone in the team once the tests are written for a day needs to have a copy of htem printed out and familiarized. These are not your traditional unit tests but Customer Interaction channels that we need to know.
+
+
+***************************************
